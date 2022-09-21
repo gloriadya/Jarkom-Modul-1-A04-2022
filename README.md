@@ -20,7 +20,7 @@ Maka judul TA yang sedang dibuka oleh Ishaq adalah Perancangan Sistem Pengendali
 **Soal 3.** Filter sehingga wireshark hanya menampilkan paket yang menuju port 80! 
 **Penjelasan:** Menuliskan `tcp.dstport == 80` dan akan menampilkan paket yang menuju port 80<br>
 ![no 3](https://user-images.githubusercontent.com/91613088/191537306-4c9f75d5-50ff-41a1-98a3-972738086a44.png)<br>
-![no 3-1](https://user-images.githubusercontent.com/91613088/191537263-8869dcdc-be2c-4f60-a753-ad9796b812eb.png)
+![no 3-1](https://user-images.githubusercontent.com/91613088/191537263-8869dcdc-be2c-4f60-a753-ad9796b812eb.png)<br><br>
 **Soal 4.** Filter sehingga wireshark hanya mengambil paket yang berasal dari port 21!<br>
 **Penjelasan:** Menggunakan `tcp.srcport == 21`, didapat hasil sebagai berikut<br>
 ![no 4](https://user-images.githubusercontent.com/89601859/191540380-1d435877-3fda-49df-aa35-03cc9102dc32.jpg)<br><br>

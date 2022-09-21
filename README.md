@@ -21,3 +21,15 @@ Maka judul TA yang sedang dibuka oleh Ishaq adalah Perancangan Sistem Pengendali
 **Penjelasan:** Menuliskan `tcp.dstport == 80` dan akan menampilkan paket yang menuju port 80<br>
 ![no 3](https://user-images.githubusercontent.com/91613088/191537306-4c9f75d5-50ff-41a1-98a3-972738086a44.png)<br>
 ![no 3-1](https://user-images.githubusercontent.com/91613088/191537263-8869dcdc-be2c-4f60-a753-ad9796b812eb.png)
+**Soal 4.** Filter sehingga wireshark hanya mengambil paket yang berasal dari port 21!<br>
+**Penjelasan:** Menggunakan `tcp.srcport == 21`, didapat hasil sebagai berikut<br>
+![no 4](https://user-images.githubusercontent.com/89601859/191540380-1d435877-3fda-49df-aa35-03cc9102dc32.jpg)<br><br>
+**Soal 5.** Filter sehingga wireshark hanya mengambil paket yang berasal dari port 443!
+**Penjelasan:** Menggunakan `tcp.srcport == 443`, didapat hasil sebagai berikut<br>
+![no 5](https://user-images.githubusercontent.com/89601859/191540649-52591bbd-72c7-4f27-8a8e-9367ff4c4ea2.jpg)<br><br>
+**Soal 6.** Filter sehingga wireshark hanya menampilkan paket yang menuju ke lipi.go.id !<br>
+**Penjelasan:** Pertama cari IP dari lipi.go.id dengan menggunakan `http.host == “lipi.go.id”`. Lalu didapat hasil sebagai berikut<br>
+![no 6-1](https://user-images.githubusercontent.com/89601859/191540998-5e912808-deed-4fe8-a82b-233500cd31d4.jpg)<br>
+Didapat port nya adalah ***192.168.0.27***<br>
+Lalu gunakan `ip.dst == 192.168.0.27`, jadi didapat hasil sebagai berikut<br>
+![no 6-2](https://user-images.githubusercontent.com/89601859/191541916-fd273cec-0d88-4227-9617-4eb829e74488.jpg)<br><br>

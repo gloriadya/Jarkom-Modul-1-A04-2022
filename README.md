@@ -24,7 +24,7 @@ Maka judul TA yang sedang dibuka oleh Ishaq adalah Perancangan Sistem Pengendali
 **Soal 4.** Filter sehingga wireshark hanya mengambil paket yang berasal dari port 21!<br>
 **Penjelasan:** Menggunakan `tcp.srcport == 21`, didapat hasil sebagai berikut<br>
 ![no 4](https://user-images.githubusercontent.com/89601859/191540380-1d435877-3fda-49df-aa35-03cc9102dc32.jpg)<br><br>
-**Soal 5.** Filter sehingga wireshark hanya mengambil paket yang berasal dari port 443!
+**Soal 5.** Filter sehingga wireshark hanya mengambil paket yang berasal dari port 443!<br>
 **Penjelasan:** Menggunakan `tcp.srcport == 443`, didapat hasil sebagai berikut<br>
 ![no 5](https://user-images.githubusercontent.com/89601859/191540649-52591bbd-72c7-4f27-8a8e-9367ff4c4ea2.jpg)<br><br>
 **Soal 6.** Filter sehingga wireshark hanya menampilkan paket yang menuju ke lipi.go.id !<br>

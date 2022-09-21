@@ -34,19 +34,19 @@ Maka judul TA yang sedang dibuka oleh Ishaq adalah Perancangan Sistem Pengendali
 Didapat port nya adalah **_192.168.0.27_**<br>
 Lalu gunakan `ip.dst == 192.168.0.27`, jadi didapat hasil sebagai berikut<br>
 ![no 6-2](https://user-images.githubusercontent.com/89601859/191541916-fd273cec-0d88-4227-9617-4eb829e74488.jpg)<br><br>
-**Soal 7.** Filter sehingga wireshark hanya mengambil paket yang berasal dari ip kalian!
+**Soal 7.** Filter sehingga wireshark hanya mengambil paket yang berasal dari ip kalian!<br>
 **Penjelasan:** Pertama kita perlu mengetahui berapa ip addres kita, untuk mengetahuinya bisa dengan mengetikkan command berikut di terminal (linux) `hostname -I`. Didapatkan ip address `10.8.28.210`
 Kemudian dilakukan display filter dengan command berikut : ip.src == 10.8.28.210
 Maka dihasilkan hasil filter seperti berikut :
 ![no 7-1](https://user-images.githubusercontent.com/49820990/191553649-63e448dc-6da1-43b5-8ce7-975d38ec26b5.png)
 
-**Soal 8.** Telusuri aliran paket dalam file .pcap yang diberikan, cari informasi berguna berupa percakapan antara dua mahasiswa terkait tindakan kecurangan pada kegiatan praktikum. Percakapan tersebut dilaporkan menggunakan protokol jaringan dengan tingkat keandalan yang tinggi dalam pertukaran datanya sehingga kalian perlu menerapkan filter dengan protokol yang tersebut.
+**Soal 8.** Telusuri aliran paket dalam file .pcap yang diberikan, cari informasi berguna berupa percakapan antara dua mahasiswa terkait tindakan kecurangan pada kegiatan praktikum. Percakapan tersebut dilaporkan menggunakan protokol jaringan dengan tingkat keandalan yang tinggi dalam pertukaran datanya sehingga kalian perlu menerapkan filter dengan protokol yang tersebut.<br>
 **Penjelasan:** Berikut beberapa percakapan yang berhasil kami capture
 ![8 1](https://user-images.githubusercontent.com/49820990/191553918-fabd4933-1aeb-43ae-ae8c-f56e6c7dd9c6.png)
 ![8 2](https://user-images.githubusercontent.com/49820990/191553943-4c86b330-4895-46bc-a10c-023daddfa2ea.png)
 ![8 3](https://user-images.githubusercontent.com/49820990/191554066-5c67863c-cfa5-4d33-85fe-1b64f899d4c2.png)
 
-**Soal 9.** Terdapat laporan adanya pertukaran file yang dilakukan oleh kedua mahasiswa dalam percakapan yang diperoleh, carilah file yang dimaksud! Untuk memudahkan laporan kepada atasan, beri nama file yang ditemukan dengan format `[nama_kelompok].des3` dan simpan output file dengan nama `“flag.txt”`.
+**Soal 9.** Terdapat laporan adanya pertukaran file yang dilakukan oleh kedua mahasiswa dalam percakapan yang diperoleh, carilah file yang dimaksud! Untuk memudahkan laporan kepada atasan, beri nama file yang ditemukan dengan format `[nama_kelompok].des3` dan simpan output file dengan nama `“flag.txt”`.<br>
 **Penjelasan:** Berdasarkan percakapan yang dilakukan di tcp.stream == 12. Seseorang mengirimkan paket berupa file terenkripsi melalui port tcp 9002. Oleh karena itu, kita lakukan display filter dengan command berikut : tcp.port == 9002. Untuk mendapatkan semua informasi paket yang dikirim dan diterima pada port tersebut. Berikut hasil filter nya
 ![9 1](https://user-images.githubusercontent.com/49820990/191554367-328f598b-dbee-4757-8f7c-a299bbd4ce58.png)
 
@@ -65,5 +65,5 @@ openssl des3 -d -in A04.des3 -out flag.txt
 Kemudian masukkan password sesuai dengan clue yang diberikan di percakapan, passwordnya adalah _nakano_.
 Setelah berhasil ter-decrypt, isinya adalah `JaRkOm2022{8uK4N_CtF_k0k_h3h3h3}`
 
-**Soal 10.** Temukan password rahasia (flag) dari organisasi bawah tanah yang disebutkan di atas!
+**Soal 10.** Temukan password rahasia (flag) dari organisasi bawah tanah yang disebutkan di atas!<br>
 **Penjelasan:** Passwordnya _nakano_
